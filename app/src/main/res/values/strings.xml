@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CatNames</string>
+    <string name="criar_nome"> criar_nome</string>
+    <string name="ver_nomes"> ver_nomes</string>
+    <string name="Gatos"> Gatos</string>
+    <string name="Sair_app"> Sair_app</string>
+
+</resources>
