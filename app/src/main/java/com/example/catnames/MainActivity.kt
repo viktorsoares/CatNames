@@ -1,5 +1,6 @@
 package com.example.catnames
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -41,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         listView.adapter = arrayAdapter
         listView.setOnItemClickListener { adapterView, view, i, l -> Toast.makeText(this, "Item selecionado" + names[i], Toast.LENGTH_SHORT).show() }
 
+        val submitTaskBtn : Button = findViewById(R.id.btn_tela2)
+        submitTaskBtn.setOnClickListener() {
+            IrParaTela2()
+        }
 
     }
 
@@ -49,6 +54,11 @@ class MainActivity : AppCompatActivity() {
         val inflater = menuInflater
         inflater.inflate(R.menu.menu_principal, menu)
         return true
+    }
+
+    private fun IrParaTela2(){
+        val tela2 = Intent(this, MainActivity2::class.java)
+        startActivity(tela2)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
